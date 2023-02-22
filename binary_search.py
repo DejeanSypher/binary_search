@@ -69,7 +69,7 @@ def count_repeats(xs, x):
             elif xs[mid] > x:
                 low = mid + 1
             else:
-                if mid == 0 or xs[mid-1] != x:
+                if mid == 0 or xs[mid - 1] != x:
                     return mid
                 else:
                     high = mid - 1
@@ -84,7 +84,7 @@ def count_repeats(xs, x):
             elif xs[mid] > x:
                 low = mid + 1
             else:
-                if mid == len(xs)-1 or xs[mid+1] != x:
+                if mid == len(xs) - 1 or xs[mid + 1] != x:
                     return mid
                 else:
                     low = mid + 1
