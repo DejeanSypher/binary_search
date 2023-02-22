@@ -27,17 +27,17 @@ def find_smallest_positive(xs):
     >>> find_smallest_positive([-3, -2, -1]) is None
     True
     '''
-    def search(left, right):
+    def bin_search(left, right):
         if left > right:
             return None
         mid = (left + right) // 2
         if xs[mid] <= 0:
-            return search(mid + 1, right)
+            return bin_search(mid + 1, right)
         elif mid == 0 or xs[mid - 1] <= 0:
             return mid
         else:
-            return search(left, mid - 1)
-    return search(0, len(xs) - 1)
+            return bin_search(left, mid - 1)
+    return bin_search(0, len(xs) - 1)
 
 
 def count_repeats(xs, x):
